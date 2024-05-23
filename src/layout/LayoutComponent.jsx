@@ -61,4 +61,4 @@ const LayoutComponent = ({ children }) => {
   );
 };
 const useTheme = () => useContext(ThemeContext);
-export {LayoutComponent, useTheme};
+export {LayoutComponent, useTheme,ThemeContext};

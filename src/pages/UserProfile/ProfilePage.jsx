@@ -131,7 +131,7 @@ const ProfilePage = () => {
         marginBottom: 10,
       }}
     >
-      <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+      <Avatar sx={{ m: 1, bgcolor: "blue" }}>
         <EditNoteIcon />
       </Avatar>
       <Typography component="h1" variant="h5">

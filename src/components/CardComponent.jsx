@@ -12,8 +12,8 @@ import {
 import DeleteIcon from "@mui/icons-material/Delete";
 import ModeIcon from "@mui/icons-material/Mode";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import PropTypes from "prop-types";
-import { useTheme } from "../layout/LayoutComponent";
+import { useTheme } from './forCardComponent/useTheme';
+import { cardComponentPropTypes } from './forCardComponent/propTypes';
 
 const CardComponent = ({
   title,
@@ -44,7 +44,7 @@ const CardComponent = ({
   };
   const { isDarkTheme } = useTheme();
   return (
-    <Card raised sx={{backgroundColor: isDarkTheme ? '#000000' : '#FFFFCC',borderColor: "black"}}>
+    <Card raised sx={{ backgroundColor: isDarkTheme ? '#000000' : '#FFFFCC', borderColor: "black" }}>
       <CardActionArea onClick={handleCardClick}>
         <CardMedia component="img" image={img} alt={alt} height={200} />
       </CardActionArea>
@@ -90,24 +90,6 @@ const CardComponent = ({
   );
 };
 
-CardComponent.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string,
-  img: PropTypes.string,
-  alt: PropTypes.string,
-  phone: PropTypes.string.isRequired,
-  address: PropTypes.shape({
-    city: PropTypes.string.isRequired,
-    street: PropTypes.string.isRequired,
-    houseNumber: PropTypes.number.isRequired,
-  }).isRequired,
-  cardNumber: PropTypes.number.isRequired,
-  id: PropTypes.string.isRequired,
-  onCard: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired,
-  onEdit: PropTypes.func.isRequired,
-  onLike: PropTypes.func.isRequired,
-  liked: PropTypes.bool,
-};
+CardComponent.propTypes = cardComponentPropTypes;
 
 export default CardComponent;

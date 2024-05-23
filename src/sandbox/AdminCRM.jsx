@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 const AdminCRM = () => {
   return (
     <Box>
+      not ready
     </Box>
   );
 };
