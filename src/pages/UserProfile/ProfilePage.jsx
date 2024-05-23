@@ -10,9 +10,11 @@ import normalizeFromServer from "./normalizeFromServer";
 import validateSchema from "../../validation/registerValidation";
 import ROUTES from "../../routes/ROUTES";
 import TextInputComponent from "../../components/TextInputComponent";
+import { useTheme } from "../../layout/LayoutComponent";
 
 
 const ProfilePage = () => {
+  const { isDarkTheme } = useTheme();
   const [inputsValue, setInputValue] = useState({
     first: "",
     middle: "",
@@ -167,7 +169,8 @@ const ProfilePage = () => {
             fullWidth
             type="button"
             variant="outlined"
-            sx={{ mt: 3, mb: 2 }}
+            sx={{ mt: 3, mb: 2, color:isDarkTheme ? "#B4C6E7" : "primary"}}
+            
             onClick={() => {
               setInputValue((prevInputs) => {
                 const updatedInputs = { ...prevInputs };

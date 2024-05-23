@@ -35,7 +35,6 @@ const Router = () => {
           </AuthGuard>
         }
       />
-      {/* TODO: The 'profile' page is not ready yet */}
       <Route
         path={ROUTES.EDITUSER}
         element={ 
