@@ -80,7 +80,7 @@ const LoginPage = () => {
       setPasswordError("");
     }
   };
-
+  
   return (
     <Grid container component="main" sx={{ height: "100vh" }}>
       <CssBaseline />
@@ -90,7 +90,7 @@ const LoginPage = () => {
         sm={4}
         md={7}
         sx={{
-          backgroundImage: "url(https://source.unsplash.com/random?wallpapers)",          
+          backgroundImage: `url(https://picsum.photos/200/300)`, //random image   
           backgroundRepeat: "no-repeat",
           backgroundColor: (t) =>
             t.palette.mode === "light"
